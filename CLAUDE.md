@@ -13,4 +13,4 @@ Firefox WebExtension (Manifest V3) that automatically sorts bookmark folders alp
 - Sort algorithm must always call `move()` for every item — no index-comparison optimizations.
 - Sorting guard uses a counter (`sortingCount`), not a boolean.
 - Debounce callbacks check `sortingCount === 0` before sorting.
-- Keep the line count in README.md and manifest.json description up to date when changing background.js (count non-blank lines only).
+- When changing background.js, count non-blank lines and update the line count in both README.md and manifest.json description.
