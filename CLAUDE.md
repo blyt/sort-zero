@@ -14,3 +14,4 @@ Firefox WebExtension (Manifest V3) that automatically sorts bookmark folders alp
 - Sorting guard uses a counter (`sortingCount`), not a boolean.
 - Debounce callbacks check `sortingCount === 0` before sorting.
 - When changing background.js, count non-blank lines and update the line count in both README.md and manifest.json description.
+- When bumping the version, update it in manifest.json, README.md, and any other files that reference it.

@@ -1,4 +1,4 @@
-# Sort Zero 0.1.0
+# Sort Zero 0.1.1
 
 Firefox extension that keeps your bookmarks sorted. Always.
 
