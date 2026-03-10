@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Sort Zero",
   "version": "0.1.0",
-  "description": "Zero-config bookmark sorting. Zero UI. Zero extra permissions. Zero extra features. 70 lines of code.",
+  "description": "Zero-config bookmark sorting. Keeps your bookmarks sorted. Always.",
   "homepage_url": "https://github.com/blyt/sort-zero",
   "browser_specific_settings": {
     "gecko": {
