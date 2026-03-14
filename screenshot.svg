@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="800" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="640" y="80" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="42" font-weight="700" fill="#1a1a1a" text-anchor="middle">Sort Zero</text>
+  <text x="640" y="120" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="20" font-weight="400" fill="#6b7280" text-anchor="middle">Keeps your bookmarks sorted. Always.</text>
+
+  <!-- Before Panel -->
+  <rect x="80" y="170" width="480" height="520" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <!-- Before header -->
+  <rect x="80" y="170" width="480" height="48" rx="12" fill="#ffffff"/>
+  <rect x="80" y="206" width="480" height="12" fill="#ffffff"/>
+  <line x1="80" y1="218" x2="560" y2="218" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="320" y="200" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="600" fill="#9ca3af" text-anchor="middle" letter-spacing="1.5">BEFORE</text>
+
+  <!-- Before items -->
+  <!-- Zillow -->
+  <rect x="110" y="240" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="142" y="256" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">Zillow</text>
+
+  <!-- Work folder -->
+  <rect x="110" y="284" width="20" height="16" rx="2" fill="#fbbf24"/>
+  <rect x="110" y="280" width="12" height="6" rx="1.5" fill="#f59e0b"/>
+  <text x="142" y="298" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="500" fill="#374151">Work</text>
+
+  <!-- Amazon -->
+  <rect x="110" y="322" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="142" y="338" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">Amazon</text>
+
+  <!-- News folder -->
+  <rect x="110" y="366" width="20" height="16" rx="2" fill="#fbbf24"/>
+  <rect x="110" y="362" width="12" height="6" rx="1.5" fill="#f59e0b"/>
+  <text x="142" y="380" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="500" fill="#374151">News</text>
+
+  <!-- GitHub -->
+  <rect x="110" y="408" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="142" y="424" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">GitHub</text>
+
+  <!-- Booking.com -->
+  <rect x="110" y="450" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="142" y="466" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">Booking.com</text>
+
+  <!-- Dev Tools folder -->
+  <rect x="110" y="494" width="20" height="16" rx="2" fill="#fbbf24"/>
+  <rect x="110" y="490" width="12" height="6" rx="1.5" fill="#f59e0b"/>
+  <text x="142" y="508" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="500" fill="#374151">Dev Tools</text>
+
+  <!-- Separator line in before -->
+  <line x1="110" y1="542" x2="530" y2="542" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Reddit -->
+  <rect x="110" y="560" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="142" y="576" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">Reddit</text>
+
+  <!-- Cooking folder -->
+  <rect x="110" y="604" width="20" height="16" rx="2" fill="#fbbf24"/>
+  <rect x="110" y="600" width="12" height="6" rx="1.5" fill="#f59e0b"/>
+  <text x="142" y="618" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="500" fill="#374151">Cooking</text>
+
+  <!-- ESPN -->
+  <rect x="110" y="646" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="142" y="662" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">ESPN</text>
+
+  <!-- Arrow -->
+  <polygon points="700,430 660,400 660,418 620,418 620,442 660,442 660,460" fill="#6366f1" opacity="0.8"/>
+
+  <!-- After Panel -->
+  <rect x="720" y="170" width="480" height="520" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <!-- After header -->
+  <rect x="720" y="170" width="480" height="48" rx="12" fill="#ffffff"/>
+  <rect x="720" y="206" width="480" height="12" fill="#ffffff"/>
+  <line x1="720" y1="218" x2="1200" y2="218" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="960" y="200" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="600" fill="#6366f1" text-anchor="middle" letter-spacing="1.5">AFTER</text>
+
+  <!-- After items — folders first, then bookmarks, alphabetical, per section -->
+  <!-- Dev Tools folder -->
+  <rect x="750" y="240" width="20" height="16" rx="2" fill="#fbbf24"/>
+  <rect x="750" y="236" width="12" height="6" rx="1.5" fill="#f59e0b"/>
+  <text x="782" y="254" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="500" fill="#374151">Dev Tools</text>
+
+  <!-- News folder -->
+  <rect x="750" y="280" width="20" height="16" rx="2" fill="#fbbf24"/>
+  <rect x="750" y="276" width="12" height="6" rx="1.5" fill="#f59e0b"/>
+  <text x="782" y="294" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="500" fill="#374151">News</text>
+
+  <!-- Work folder -->
+  <rect x="750" y="320" width="20" height="16" rx="2" fill="#fbbf24"/>
+  <rect x="750" y="316" width="12" height="6" rx="1.5" fill="#f59e0b"/>
+  <text x="782" y="334" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="500" fill="#374151">Work</text>
+
+  <!-- Amazon -->
+  <rect x="750" y="362" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="782" y="378" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">Amazon</text>
+
+  <!-- Booking.com -->
+  <rect x="750" y="404" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="782" y="420" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">Booking.com</text>
+
+  <!-- GitHub -->
+  <rect x="750" y="446" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="782" y="462" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">GitHub</text>
+
+  <!-- Zillow -->
+  <rect x="750" y="488" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="782" y="504" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">Zillow</text>
+
+  <!-- Separator line in after -->
+  <line x1="750" y1="526" x2="1170" y2="526" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Cooking folder -->
+  <rect x="750" y="544" width="20" height="16" rx="2" fill="#fbbf24"/>
+  <rect x="750" y="540" width="12" height="6" rx="1.5" fill="#f59e0b"/>
+  <text x="782" y="558" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="500" fill="#374151">Cooking</text>
+
+  <!-- ESPN -->
+  <rect x="750" y="582" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="782" y="598" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">ESPN</text>
+
+  <!-- Reddit -->
+  <rect x="750" y="624" width="20" height="20" rx="3" fill="#dbeafe"/>
+  <text x="782" y="640" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#374151">Reddit</text>
+
+  <!-- Footer -->
+  <text x="640" y="750" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="16" font-weight="400" fill="#9ca3af" text-anchor="middle">Folders first, alphabetical, separator-aware</text>
+</svg>
