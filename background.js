@@ -1,3 +1,4 @@
+const api = globalThis.browser ?? globalThis.chrome;
 let sortingCount = 0;
 const debounceTimers = new Map();
 const DEBOUNCE_MS = 250;
@@ -6,7 +7,7 @@ const compare = (a, b) =>
   a.title.localeCompare(b.title, undefined, { sensitivity: "base" });
 
 async function sortFolder(folderId) {
-  const children = await browser.bookmarks.getChildren(folderId);
+  const children = await api.bookmarks.getChildren(folderId);
   if (children.length === 0) return [];
   const subfolderIds = [], groups = [], separators = [];
   let currentGroup = [];
@@ -17,15 +18,15 @@ async function sortFolder(folderId) {
       separators.push(child);
       currentGroup = [];
     } else {
-      if (child.type === "folder") subfolderIds.push(child.id);
+      if (!child.url) subfolderIds.push(child.id);
       currentGroup.push(child);
     }
   }
   groups.push(currentGroup);
 
   const sortedGroups = groups.map((group) => [
-    ...group.filter((item) => item.type === "folder").sort(compare),
-    ...group.filter((item) => item.type !== "folder").sort(compare),
+    ...group.filter((item) => !item.url).sort(compare),
+    ...group.filter((item) => item.url).sort(compare),
   ]);
 
   const reassembled = sortedGroups.flatMap((group, i) =>
@@ -35,7 +36,7 @@ async function sortFolder(folderId) {
   sortingCount++;
   try {
     for (let i = 0; i < reassembled.length; i++)
-      await browser.bookmarks.move(reassembled[i].id, { parentId: folderId, index: i });
+      await api.bookmarks.move(reassembled[i].id, { parentId: folderId, index: i });
   } finally {
     sortingCount--;
   }
@@ -48,7 +49,7 @@ async function sortFolderRecursive(folderId) {
 }
 
 async function sortAll() {
-  const tree = await browser.bookmarks.getTree();
+  const tree = await api.bookmarks.getTree();
   for (const container of tree[0].children) await sortFolderRecursive(container.id);
 }
 
@@ -70,14 +71,14 @@ function onBookmarkCreatedMovedRemoved(id, info) {
 
 async function onBookmarkChanged(id) {
   if (sortingCount > 0) return;
-  const [node] = await browser.bookmarks.get(id).catch(() => []);
+  const [node] = await api.bookmarks.get(id).catch(() => []);
   if (node) debounceSortFolder(node.parentId);
 }
 
-browser.bookmarks.onCreated.addListener(onBookmarkCreatedMovedRemoved);
-browser.bookmarks.onMoved.addListener(onBookmarkCreatedMovedRemoved);
-browser.bookmarks.onRemoved.addListener(onBookmarkCreatedMovedRemoved);
-browser.bookmarks.onChanged.addListener(onBookmarkChanged);
+api.bookmarks.onCreated.addListener(onBookmarkCreatedMovedRemoved);
+api.bookmarks.onMoved.addListener(onBookmarkCreatedMovedRemoved);
+api.bookmarks.onRemoved.addListener(onBookmarkCreatedMovedRemoved);
+api.bookmarks.onChanged.addListener(onBookmarkChanged);
 
-browser.runtime.onStartup.addListener(() => sortAll().catch(console.error));
-browser.runtime.onInstalled.addListener(() => sortAll().catch(console.error));
+api.runtime.onStartup.addListener(() => sortAll().catch(console.error));
+api.runtime.onInstalled.addListener(() => sortAll().catch(console.error));
